@@ -97,7 +97,7 @@ itDecimal.addEventListener('click',() => {
     let decimal = itDecimal.innerText;
     display.value += '.';
 })
-
+ 
 // clear button
 itClear.addEventListener('click',() => {
     let clear = itClear.textContent;

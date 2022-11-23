@@ -60,12 +60,25 @@ button {
     background-color: rgb(102, 62, 245);
     color: white;
 }
+
+.btn-operator:hover {
+    background-color: rgb(178, 62, 245);
+}
 .btn-numb {
     background-color: lightgray;
+}
+.btn-numb:hover {
+    background-color: white;
 }
 .btn-equal {
     background-color: rgb(0, 128, 122);
 }
+.btn-equal:hover {
+    background-color: aquamarine;
+}
 .btn-clear {
     background-color: rgb(255, 0, 76);
+}
+.btn-clear:hover {
+    background-color:red;
 }
