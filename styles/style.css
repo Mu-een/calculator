@@ -56,11 +56,11 @@ button {
     border-radius: 5px;
     cursor: pointer;
 }
-.btn-yellow {
+.btn-operator {
     background-color: rgb(102, 62, 245);
     color: white;
 }
-.btn-grey{
+.btn-numb {
     background-color: lightgray;
 }
 .btn-equal {
