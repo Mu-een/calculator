@@ -8,6 +8,7 @@ let numberSix = document.getElementById('numb6');
 let numberSeven = document.getElementById('numb7');
 let numberEight = document.getElementById('numb8');
 let numberNine = document.getElementById('numb9');
+let itDecimal = document.getElementById('decimal');
 
 let itAdd = document.getElementById('add')
 let itMinus = document.getElementById('minus')
@@ -16,8 +17,8 @@ let itDivide = document.getElementById('divide')
 
 let itClear = document.getElementById('clear')
 let itEqual = document.getElementById('equal')
+let itDelete = document.getElementById('del')
 
-let itDecimal = document.getElementById('decimal');
 let display = document.getElementById('display');
 
 // number buttons
@@ -107,4 +108,9 @@ itClear.addEventListener('click',() => {
 // equal button
 itEqual.addEventListener('click',() => {
     display.value = eval(display.value);
+})
+
+// delete button
+itDelete.addEventListener('click',() => {
+    display.value = display.value.slice(0,-1);
 })
