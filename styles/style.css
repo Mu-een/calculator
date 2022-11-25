@@ -10,6 +10,7 @@
 body {
     min-height: 100vh;
     background-color: whitesmoke;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,7 +20,7 @@ body {
 .calculator {
     width: 300px;
     height: 500px;
-    box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 30px rgba(102, 62, 245, 0.851);
     border-radius: 20px;
     background-color: #22252D;
     overflow: hidden;
@@ -62,23 +63,25 @@ button {
 }
 
 .btn-operator:hover {
-    background-color: rgb(178, 62, 245);
+    border-radius: 15px;
 }
 .btn-numb {
-    background-color: lightgray;
-}
-.btn-numb:hover {
     background-color: white;
 }
+.btn-numb:hover {
+    border-radius: 15px;
+}
 .btn-equal {
-    background-color: rgb(0, 128, 122);
+    color: white;
+    background-color: rgb(102, 62, 245);
 }
 .btn-equal:hover {
-    background-color: aquamarine;
+    border-radius: 15px;
 }
 .btn-clear {
-    background-color: rgb(255, 0, 76);
+    color: black;
+    background-color: rgb(102, 62, 245);
 }
 .btn-clear:hover {
-    background-color:red;
+    border-radius: 15px;
 }
