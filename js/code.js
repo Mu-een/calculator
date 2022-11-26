@@ -10,16 +10,18 @@ let numberEight = document.getElementById('numb8');
 let numberNine = document.getElementById('numb9');
 let itDecimal = document.getElementById('decimal');
 
-let itAdd = document.getElementById('add')
-let itMinus = document.getElementById('minus')
-let itMultiply = document.getElementById('multiply')
-let itDivide = document.getElementById('divide')
+let itAdd = document.getElementById('add');
+let itMinus = document.getElementById('minus');
+let itMultiply = document.getElementById('multiply');
+let itDivide = document.getElementById('divide');
 
-let itClear = document.getElementById('clear')
-let itEqual = document.getElementById('equal')
-let itDelete = document.getElementById('del')
+let itClear = document.getElementById('clear');
+let itEqual = document.getElementById('equal');
+let itDelete = document.getElementById('del');
 
 let display = document.getElementById('display');
+
+let allowed = true;
 
 // number buttons
 numberOne.addEventListener('click', () => {
@@ -76,41 +78,56 @@ numberZero.addEventListener('click',() => {
 itAdd.addEventListener('click',() => {
     let add = itAdd.textContent;
     display.value += add;
+    allowed = true;
 })
 
 itMinus.addEventListener('click',() =>{
     let minus = itMinus.textContent;
     display.value += minus;
+    allowed = true;
 })
 
 itDivide.addEventListener('click',() =>{
     let divide = itDivide.textContent;
     display.value += divide;
+    allowed = true;
 })
 
 itMultiply.addEventListener('click',() => {
     let multiply = itMultiply.textContent;
     display.value += multiply;
+    allowed = true;
 })
 
 // decimal button
 itDecimal.addEventListener('click',() => {
-    let decimal = itDecimal.innerText;
-    display.value += '.';
+    if (allowed) {
+        display.value += decimal.textContent;
+        allowed = false;
+    }    
 })
  
 // clear button
 itClear.addEventListener('click',() => {
     let clear = itClear.textContent;
     display.value = '';
+    allowed = true;
 })
 
 // equal button
 itEqual.addEventListener('click',() => {
     display.value = eval(display.value);
+    if (display.value.includes('.')) {
+        allowed = false;
+    } else allowed = true;
 })
 
 // delete button
 itDelete.addEventListener('click',() => {
-    display.value = display.value.slice(0,-1);
+    if (display.value[display.value.length -1] == '.') {
+        display.value = display.value.slice(0,-1);
+        allowed =true;
+    } else {
+        display.value = display.value.slice(0,-1);
+    }
 })
